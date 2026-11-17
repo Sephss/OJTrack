@@ -31,4 +31,5 @@ An Android app for students doing their On-the-Job Training (OJT) or internship.
 
 ## Author
 
-**[Your Name]** · [@your-username](https://github.com/your-username)
+Joseph Elieeee 
+
