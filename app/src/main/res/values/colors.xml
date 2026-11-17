@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="lightmodebg">#F3F1FF</color>
+
+    <color name="darktext">#29283A</color>
+    <color name="mutedtext">#85849A</color>
+    <color name="ojtcardcolor">#49418F</color>
+    <color name="ringcolor">#C9C4FF</color>
+    <color name="journalcolor">#E1E8FF</color>
+    <color name="notecolor">#FFF1CC</color>
+    <color name="timeincolor">#D9F5EA</color>
+    <color name="pink">#FFE3EA</color>
+</resources>
