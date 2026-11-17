@@ -13,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.ojtrack.R;
 
 public class NotesPage extends AppCompatActivity {
-    private ImageView homeBtn;
+    private ImageView homeBtn, ojtBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +22,7 @@ public class NotesPage extends AppCompatActivity {
         setContentView(R.layout.activity_notes_page);
 
         homeBtn = findViewById(R.id.homeBtn);
+        ojtBtn = findViewById(R.id.ojtBtn);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -31,6 +32,12 @@ public class NotesPage extends AppCompatActivity {
 
         homeBtn.setOnClickListener(d -> {
             Intent intent = new Intent(NotesPage.this, HomePage.class);
+            startActivity(intent);
+            finish();
+        });
+
+        ojtBtn.setOnClickListener(g -> {
+            Intent intent = new Intent(NotesPage.this, OJTHoursPage.class);
             startActivity(intent);
             finish();
         });

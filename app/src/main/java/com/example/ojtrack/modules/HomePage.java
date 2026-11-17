@@ -19,7 +19,7 @@ import androidx.core.view.WindowInsetsCompat;
 import com.example.ojtrack.R;
 
 public class HomePage extends AppCompatActivity {
-    private ImageView notesBtn;
+    private ImageView notesBtn, ojtBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +33,7 @@ public class HomePage extends AppCompatActivity {
         renderWeekBars(weekBars, hours, labels, 6);               // index of today
 
         notesBtn = findViewById(R.id.notesBtn);
+        ojtBtn = findViewById(R.id.ojtBtn);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -41,6 +42,11 @@ public class HomePage extends AppCompatActivity {
 
         notesBtn.setOnClickListener(d -> {
             Intent intent = new Intent(HomePage.this, NotesPage.class);
+            startActivity(intent);
+            finish();
+        });
+        ojtBtn.setOnClickListener(d -> {
+            Intent intent = new Intent(HomePage.this, OJTHoursPage.class);
             startActivity(intent);
             finish();
         });
