@@ -13,6 +13,9 @@
         android:theme="@style/Theme.OJTrack"
         tools:targetApi="31">
         <activity
+            android:name=".modules.CreateNotesPage"
+            android:exported="false" />
+        <activity
             android:name=".modules.OJTHoursPage"
             android:exported="false" />
         <activity

@@ -2,6 +2,7 @@ package com.example.ojtrack.modules;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.activity.EdgeToEdge;
@@ -14,6 +15,7 @@ import com.example.ojtrack.R;
 
 public class NotesPage extends AppCompatActivity {
     private ImageView homeBtn, ojtBtn;
+    private Button btnAdd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +25,7 @@ public class NotesPage extends AppCompatActivity {
 
         homeBtn = findViewById(R.id.homeBtn);
         ojtBtn = findViewById(R.id.ojtBtn);
+        btnAdd = findViewById(R.id.btnAdd);
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
@@ -40,6 +43,12 @@ public class NotesPage extends AppCompatActivity {
             Intent intent = new Intent(NotesPage.this, OJTHoursPage.class);
             startActivity(intent);
             finish();
+        });
+
+        btnAdd.setOnClickListener(d -> {
+            Intent intent = new Intent(NotesPage.this, CreateNotesPage.class);
+            startActivity(intent);
+
         });
     }
 }
